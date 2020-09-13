@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trend.NXT HTML5 :: L1 :: Assignment 4 | 20111943</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        canvas {
+            border: 2px solid #d1d1d1;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #f1f1f1
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Board of Control for Cricket in India</h1>
+    <h3>T20 Cricket Match Statistics</h3>
+
+    <canvas id="bcci" width="500" height="400">Your browser does not support the HTML5 canvas tag.</canvas>
+
+    <script>
+        var d = document.getElementById('bcci');
+        var cvs = d.getContext('2d');
+
+        cvs.font = '15px Arial';
+        cvs.lineWidth = 1.5;
+
+        // Graph Code
+        cvs.beginPath();
+        cvs.moveTo(140, 370);
+        cvs.lineTo(140, 0);
+        cvs.moveTo(240, 370);
+        cvs.lineTo(240, 0);
+        cvs.moveTo(340, 370);
+        cvs.lineTo(340, 0);
+        cvs.moveTo(440, 370);
+        cvs.lineTo(440, 0);
+        cvs.moveTo(40, 315);
+        cvs.lineTo(500, 315);
+        cvs.moveTo(40, 265);
+        cvs.lineTo(500, 265);
+        cvs.moveTo(40, 215);
+        cvs.lineTo(500, 215);
+        cvs.moveTo(40, 165);
+        cvs.lineTo(500, 165);
+        cvs.moveTo(40, 115);
+        cvs.lineTo(500, 115);
+        cvs.moveTo(40, 65);
+        cvs.lineTo(500, 65);
+        cvs.moveTo(40, 15);
+        cvs.lineTo(500, 15);
+        cvs.strokeStyle = '#cccccc';
+        cvs.stroke();
+
+        cvs.beginPath();
+        cvs.moveTo(40, 400);
+        cvs.lineTo(40, 0);
+        cvs.moveTo(0, 370);
+        cvs.lineTo(500, 370);
+        cvs.strokeStyle = '#000000';
+        cvs.stroke();
+
+        cvs.strokeText('280', 0, 20);
+        cvs.strokeText('240', 0, 70);
+        cvs.strokeText('200', 0, 120);
+        cvs.strokeText('160', 0, 170);
+        cvs.strokeText('120', 0, 220);
+        cvs.strokeText('80', 8, 270);
+        cvs.strokeText('40', 8, 320);
+
+        cvs.strokeText('0', 16, 395);
+        cvs.strokeText('5', 136, 395);
+        cvs.strokeText('10', 231, 395);
+        cvs.strokeText('15', 332, 395);
+        cvs.strokeText('20', 431, 395);
+
+        cvs.beginPath();
+        cvs.font = 'bold 11px Arial';
+        cvs.fillStyle = '#3297b7';
+        cvs.fillText('RUNS ^', 50, 10);
+        cvs.fillText('OVERS >', 450, 360);
+
+        cvs.beginPath();
+        cvs.strokeStyle = '#3297b7';
+        cvs.arc(140, 315, 2, 0, 2 * Math.PI);
+        cvs.arc(240, 275, 2, 0, 2 * Math.PI);
+        cvs.arc(340, 190, 2, 0, 2 * Math.PI);
+        cvs.stroke();
+    </script>
+
+</body>
+
+</html>
